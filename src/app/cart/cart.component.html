@@ -1,0 +1,8 @@
+<h2>Your Cart</h2>
+
+<div *ngIf="getCart().length > 0">
+  <ng-container *ngFor="let book of getCart()">
+    <p class="my-4 text-2xl">{{ book.name }}</p>
+  </ng-container>
+</div>
+<div *ngIf="getCart().length === 0">No books in the Cart</div>
